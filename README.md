@@ -72,7 +72,7 @@ Requirements
 
 Installation
 ------------
-#. git clone GoogleScraper 
+    ``git clone GoogleScraper`` 
 
 Then install most recent Redis, start it and put its IP into the appropriate place in launch_happiness.sh ( and also in celery_tasks.py ).
 Okay, I'm agree, that this installation is horrible, and plan to refactor that in nearest future

@@ -84,7 +84,7 @@ class InstagramCrawler(Task):
     # TODO: use tags search to expand possible variants of query ( "eiffel", "eiffelparis", "eiffelcarzy" etc ) 
     # TODO: do not call this task directly, only from pagination iterator
     # Query is a search query ( keywords or free-form text )
-    def run(self, query, next_url = None, token="2055276013.1677ed0.de948b2188724a9a83d5628293f126ed", cli_id='b5a54679833e4dfd8afabd53de5027f8', cli_secret='9ef736739aa54261b70f862fea858cdc', results_amount = 100):
+    def run(self, query, next_url = None, token="", cli_id='', cli_secret='', results_amount = 100):
 	# 1. Call Instagram and get list of media for this query  
 	if ( next_url == None ):
 		print "Calling API for a first time..."
@@ -125,7 +125,7 @@ class FlickrCrawler(Task):
 
     # Actually converts query to Flickr to search request
     # Query is a search query ( keywords or free-form text )
-    def run(self, query, page_id = 0, urls_per_page = 500, api_key= "a1c5cc6b3d6c7bad6ceff207e2d901b2", api_secret="7ee7e077ffb72800"):
+    def run(self, query, page_id = 0, urls_per_page = 500, api_key= "", api_secret=""):
 	# 1. Call Flickr
 
 	flickr_api.set_keys(api_key = api_key, api_secret = api_secret )

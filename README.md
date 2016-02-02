@@ -32,6 +32,7 @@ It then queues these URLs for actual downloading by sending message with URL to 
 **Example Usage**
     First start Celery: ``./launch_happiness.sh``
     Then write code like that ( or use shipped code in test_celery.py ):
+
     ```python
 	class InstaPaginator:
 		def __init__( self, query ):
@@ -64,6 +65,7 @@ Requirements
 * Selenium WebDriver
 * Xvfb ( UNIX headless X )
 * MongoDB
+* Redis
 
 (may have to be independently installed)
 
@@ -71,4 +73,7 @@ Requirements
 Installation
 ------------
 #. git clone GoogleScraper 
+
+Then install most recent Redis, start it and put its IP into the appropriate place in launch_happiness.sh ( and also in celery_tasks.py ).
+Okay, I'm agree, that this installation is horrible, and plan to refactor that in nearest future
 
